@@ -43,6 +43,7 @@ public class Chat implements MessageMediator {
 
     @Override
     public void removeUser(User user) {
+        user.setMediator(null);
         this.users.remove(user);
     }
 }
